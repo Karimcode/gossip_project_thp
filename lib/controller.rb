@@ -1,12 +1,9 @@
 require_relative 'gossip'
-# require 'sinatra'
 
 
 class ApplicationController < Sinatra::Base
 
-  get '/wiki' do
-    "Hello World"
-  end
+
 
   get '/' do
     erb :index, locals: {gossips: Gossip.all}
